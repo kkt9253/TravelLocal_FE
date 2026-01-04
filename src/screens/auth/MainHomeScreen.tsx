@@ -260,7 +260,7 @@ const MainHomeScreen = () => {
         thumbnailUrl: item.thumbnailUrl ?? item.imageUrl ?? null,
       }));
 
-      console.log('🟢 모든 프로그램 데이터:', mapped);
+      // console.log('🟢 모든 프로그램 데이터:', mapped);
 
       // 각 프로그램의 상세 정보를 가져와서 wishlistCount 업데이트
       const updatedPrograms = await Promise.all(
@@ -293,7 +293,7 @@ const MainHomeScreen = () => {
         })
       );
 
-      console.log('🟢 wishlistCount 업데이트된 프로그램들:', updatedPrograms);
+      // console.log('🟢 wishlistCount 업데이트된 프로그램들:', updatedPrograms);
 
       // wishlistCount 기준으로 내림차순 정렬
       const sortedTours = updatedPrograms.sort((a, b) => (b.wishlistCount || 0) - (a.wishlistCount || 0));

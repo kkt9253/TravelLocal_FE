@@ -9,15 +9,10 @@ import QuestionScreen from '../screens/mbti/QuestionScreen';
 import Make_program from '../screens/program/Make_program';
 import TraitSelection from '../screens/Select_mbti/Trait_Selection';
 import ResultScreen from '../screens/mbti/ResultScreen';
-<<<<<<< Updated upstream
+// ✅ 충돌 기호 제거 및 정리된 임포트
 import Practice from '../screens/practice/Program_review';
 import PlaceReview from '../screens/practice/place_review';
 import Practice1 from '../screens/practice/Program_detail';
-=======
-import Practice from '../screens/practice/Practice';
-import PlaceReview from '../screens/practice/place_review';
-import Practice1 from '../screens/practice/Practice_detail page';
->>>>>>> Stashed changes
 import PlaceDetailScreen from '../screens/practice/PlaceDetailScreen';
 import MyReviewList from '../screens/mypage/MyReviewList';
 import MyPage from '../screens/mypage/MyPage';
@@ -25,7 +20,6 @@ import PaymentScreen from '../screens/payment/PaymentScreen';
 import PaymentCompleteScreen from '../screens/payment/PaymentCompleteScreen';
 import WishlistScreen from '../screens/wishlist/WishlistScreen';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-// import IamportPaymentScreen from '../screens/payment/IamportPaymentScreen';
 import CalendarScreen from '../screens/calendar/CalendarScreen';
 import ChatMain from '../screens/chat/ChatMain';
 import ChatRoom from '../screens/chat/ChatRoom';
@@ -73,21 +67,7 @@ export type AppStackParamList = {
   PlaceReview: { placeId: string; placeName?: string };
   PracticeDetail: {tourProgramId: number; refresh?: boolean; selectedLanguage?: string};
   PlaceDetail: {placeName: string; placeDescription: string; lat: number; lon: number; placeId?: string; language?: string; tourProgramId?: number};
-<<<<<<< Updated upstream
-  // IamportPayment: {
-  //   userCode: string;
-  //   data: {
-  //     pg: string;
-  //     pay_method: string;
-  //     name: string;
-  //     amount: number;
-  //     merchant_uid: string;
-  //     buyer_name: string;
-  //     buyer_tel: string;
-  //     buyer_email: string;
-  //   };
-  // };
-=======
+  // ✅ 중복 제거된 IamportPayment 타입
   IamportPayment: {
     userCode: string;
     data: {
@@ -101,7 +81,6 @@ export type AppStackParamList = {
       buyer_email: string;
     };
   };
->>>>>>> Stashed changes
   CalendarHome: undefined;
   ChatMain: undefined;
   ChatRoom: {roomId: string; userId?: number};
@@ -257,11 +236,6 @@ const AppNavigator = () => {
           headerTitleStyle: {fontSize: 20},
         }}
       />
-      {/* <Stack.Screen
-        name="IamportPayment"
-        component={IamportPaymentScreen}
-        options={{headerShown: false}}
-      /> */}
       <Stack.Screen
         name="CalendarHome"
         component={CalendarScreen}
